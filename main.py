@@ -91,7 +91,6 @@ def showSuccessPopup():
 def setupMenu(app):
     menu = tk.Menu(app)
     app.config(menu=menu)
-
     fileMenu = tk.Menu(menu)
     menu.add_cascade(label="Exit?", menu=fileMenu)
     fileMenu.add_command(label="Yes", command=app.quit)
@@ -116,12 +115,10 @@ def showLoading():
 productFrame = tk.Frame(app, bg="#3498db")
 productFrame.pack(side=tk.LEFT, padx=20)
 
-cartButton = tk.Button(app, text="View Cart", command=viewCart, padx=10, pady=5, bg="#2980b9", fg="white", font=("Arial", 12, "bold"))
+cartButton = tk.Button(app, text="View Cart", command=viewCart, padx=10, pady=5, bg="#2980b9", fg="#fff", font=("Arial", 12, "bold"))
 cartButton.pack(side=tk.RIGHT, padx=20)
 
 displayProducts(app, productFrame)
-
 setupMenu(app)
 setupStatusBar(app)
-
 app.mainloop()
